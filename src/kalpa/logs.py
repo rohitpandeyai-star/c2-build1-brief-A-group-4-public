@@ -52,3 +52,9 @@ def challenge(phase: str, broke: str, tried: str, changed: str, next_time: str, 
 
 def approach(part: str, considered: str, chosen: str, why: str, would_change: str, happened: str, owner="", n=""):
     _append_row(DOCS / "approach-log.md", "Approaches considered", [n, part, considered, chosen, why, would_change, happened, owner, date.today().isoformat()])
+
+
+"""Append a row to docs/ai-log.md: every use of a coding or chat assistant, one line each."""
+
+def ai(asked: str, did: str, who="", tool="", n=""):
+    _append_row(DOCS / "ai-log.md", "What we asked", [n, date.today().isoformat(), who, tool, asked, did])
